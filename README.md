@@ -4,3 +4,5 @@ Curso ministrado pelo Douglas Moura, no Santander Bootcamp Fullstack Developer d
 
 ## Anotações
 
+* npm run start 
+* npx tsc indes.ts
