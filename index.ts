@@ -1,15 +1,13 @@
+// ? para o item ser um dado opcional
 interface IUsuario {
     id: string;
     email: string;
+    cargo?: 'gerente' | 'coordenador' | 'supervisor' | 'funcionario';
 }
 
-interface IAdmin extends IUsuario {
-    cargo: 'gerente' | 'coordenador' | 'supervisor';
-}
-
-function redirecione(usuario: IUsuario | IAdmin) {
-    if('cargo' in usuario) {
-        //redirecionar para a area de administração
+function redirecione(usuario: IUsuario) {
+    if(usuario.cargo){
+        // redirecionar(usuario.cargo);
     }
-    //redirecionar para area do usuario
+    // redirecionar para a area do usuario
 }
