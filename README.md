@@ -4,5 +4,7 @@ Curso ministrado pelo Douglas Moura, no Santander Bootcamp Fullstack Developer d
 
 ## Anotações
 
-* npm run start 
-* npx tsc indes.ts
+* Instalar o parcel-bundler : npm i parcel-bundler
+* Rodar a aplicação : npm run start 
+* Criar arquivo JS apartir do TS : npx tsc index.ts
+* Criar tsconfig.json : npx tsc --init
