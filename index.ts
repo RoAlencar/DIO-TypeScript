@@ -1,13 +1,23 @@
-// ? para o item ser um dado opcional
-interface IUsuario {
-    id: string;
-    email: string;
-    cargo?: 'gerente' | 'coordenador' | 'supervisor' | 'funcionario';
+interface ICachorro {
+    nome: string;
+    idade: number;
+    parqueFavorito?: string;
 }
 
-function redirecione(usuario: IUsuario) {
-    if(usuario.cargo){
-        // redirecionar(usuario.cargo);
-    }
-    // redirecionar para a area do usuario
+// -? ou + removendo os opcionais 
+type CachorroSomenteLeitura = {
+    +readonly [K in keyof ICachorro]-? : ICachorro[K];
 }
+
+class MeuCachorro implements CachorroSomenteLeitura {
+    idade;
+    nome;
+    parqueFavorito;
+
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
+
+const cao = new MeuCachorro('Apolo', 14);
